@@ -8,6 +8,7 @@ import { ConfigModule } from '@nestjs/config';
 
 import { ConfigService } from '@nestjs/config';
 import { CategoriasModule } from './categorias/categorias.module';
+import { GastosModule } from './gastos/gastos.module';
 
 @Module({
   imports: [
@@ -33,7 +34,9 @@ import { CategoriasModule } from './categorias/categorias.module';
       }),
     }),
 
-    CategoriasModule
+    CategoriasModule,
+
+    GastosModule
   ],
   controllers: [AppController],
   providers: [AppService],
