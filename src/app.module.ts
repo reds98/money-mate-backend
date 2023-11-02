@@ -5,6 +5,7 @@ import { CuentasModule } from './cuentas/cuentas.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Cuenta } from './cuentas/entities/cuenta.entity';
 import { ConfigModule } from '@nestjs/config';
+
 import { ConfigService } from '@nestjs/config';
 
 @Module({
