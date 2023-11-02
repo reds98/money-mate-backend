@@ -7,6 +7,7 @@ import { Cuenta } from './cuentas/entities/cuenta.entity';
 import { ConfigModule } from '@nestjs/config';
 
 import { ConfigService } from '@nestjs/config';
+import { CategoriasModule } from './categorias/categorias.module';
 
 @Module({
   imports: [
@@ -30,7 +31,9 @@ import { ConfigService } from '@nestjs/config';
         entities: [__dirname + '/**/entities/*.entity{.ts,.js}'],
         synchronize: true, // Importante: configura esto en 'false' para cuando se pasa en produccion
       }),
-    })
+    }),
+
+    CategoriasModule
   ],
   controllers: [AppController],
   providers: [AppService],
